@@ -1,75 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Font Awesome ICON CDN -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="style.css" />
-    <title>Simple Quiz Application | upCoding</title>
-  </head>
-  <div>
-    <!-- Quiz Start Button -->
-    <button class="quiz-start-btn" onclick="start()">Start Quiz</button>
-
-    <!-- Quiz Box-->
-     <div class="containar">
-        <header>
-            <h2>Simple Quiz Application</h2>
-        </header>
-        <div class="quiz-box">
-            <h3>1.Question goes here</h3>
-            <ul class="options">
-                <li class="option">
-                    <span>Option goes here</span>
-                     <i class="fa-regular fa-circle-check"></i>
-                     </li>
-                     <li class="option true">
-                         <span>option goes here</span>
-                         <i class="fa-regular fa-circle-xmark"></i>
-                     </li>
-                     <li class="option false">
-                        <span>Option goes here</span>
-                        <i class="fa-regular fa-circle-xmark"></i>
-                     </li>
-                     <li class="option">
-                        <span>Option goes here</span>
-                        <i class="fa-regular fa-circle-xmark"></i>
-                     </li>
-                     <li class="option">
-                      <span>Option goes here</span>
-                      <i class="fa-regular fa-circle-xmark"></i>
-                  </li>
-            </ul>
-        </div>
-    </div>
-    <footer>
-        <class="quiz-count">
-            <span>
-                <p>1 of 5 Question</p> 
-            </span>
-            <div class="button">
-                <button class="btn-exit" onclick="exit()">Exit</button>
-                <button class="btn-next">Next</button>
-             </div>
-           </footer>
-        </div>
-
-      <!--Result Box-->
-      <div class="result">
-        <i class="fa-soild fa-crown"></i>
-        <p>
-          Your answered <span>3</span>correct question out of <span>5!</span>.
-        </p>
-        <button class="star-again-btn" onclick="exit()">Start again</button> 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <!-- Login Screen -->
+    <div id="login-screen">
+      <h1>Login to Quiz App</h1>
+      <input type="text" id="username" placeholder="Enter your name" />
+      <button id="login-btn">Login</button>
     </div>
 
-    <!-- JavaScript -->
-    <script src="script.js"></script>
-  </body>
+    <!-- Quiz Screen -->
+    <div id="quiz-screen" class="hidden">
+      <h2 id="question"></h2>
+      <div id="options"></div>
+      <button id="next-btn" class="hidden">Next</button>
+      <button id="submit-btn" class="hidden">Submit</button>
+    </div>
+
+    <!-- Result Screen -->
+    <div id="result-screen" class="hidden">
+      <h1> Your Final Score: <span"final-score"></span></h1>
+      <button id="restart-btn">Restart Quiz</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
 </html>
